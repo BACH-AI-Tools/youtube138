@@ -30,7 +30,7 @@
 
 ## 简介
 
-这是一个使用 [FastMCP](https://fastmcp.wiki) 自动生成的 MCP 服务器，用于访问 Youtube138 API。
+这是一个 MCP 服务器，用于访问 Youtube138 API。
 
 - **PyPI 包名**: `bach-youtube138`
 - **版本**: 1.0.0
@@ -106,8 +106,8 @@ export API_KEY="your_api_key_here"
 {
   "mcpServers": {
     "youtube138": {
-      "command": "python",
-      "args": ["E:\path\to\youtube138\server.py"],
+      "command": "uvx",
+      "args": ["--from", "bach-youtube138", "bach_youtube138"],
       "env": {
         "API_KEY": "your_api_key_here"
       }
@@ -524,7 +524,6 @@ Playlist Details
 
 ## 技术栈
 
-- **FastMCP**: 快速、Pythonic 的 MCP 服务器框架
 - **传输协议**: stdio
 - **HTTP 客户端**: httpx
 
